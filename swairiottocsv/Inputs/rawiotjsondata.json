@@ -1,0 +1,21 @@
+{
+    "Name": "rawiotjsondata",
+    "Type": "Data Stream",
+    "DataSourceType": "Event Hub",
+    "EventHubProperties": {
+        "ServiceBusNamespace": "ihsuprodmwhres003dednamespace",
+        "EventHubName": "iothub-ehub-swairmonit-16493377-c3eb0ac8d8",
+        "SharedAccessPolicyName": "service",
+        "SharedAccessPolicyKey": null,
+        "ConsumerGroupName": "",
+        "AuthenticationMode": "ConnectionString"
+    },
+    "DataSourceCredentialDomain": null,
+    "Serialization": {
+        "Type": "Json",
+        "Encoding": "UTF8"
+    },
+    "PartitionKey": null,
+    "CompressionType": "None",
+    "ScriptType": "Input"
+}

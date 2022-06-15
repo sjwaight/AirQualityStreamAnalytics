@@ -1,0 +1,23 @@
+{
+    "ScriptType": "JobConfig",
+    "DataLocale": "en-US",
+    "OutputErrorPolicy": "Retry",
+    "EventsLateArrivalMaxDelayInSeconds": 5,
+    "StreamingUnits": 1,
+    "CompatibilityLevel": "1.0",
+    "UseSystemAssignedIdentity": true,
+    "GlobalStorage": {
+        "AccountName": null,
+        "AccountKey": null,
+        "AuthenticationMode": "ConnectionString"
+    },
+    "ContentStoragePolicy": "SystemAccount",
+    "CustomCodeStorage": {
+        "AccountName": null,
+        "AccountKey": null,
+        "ContainerName": null,
+        "Path": null
+    },
+    "DataSourceCredentialDomain": null,
+    "Tags": {}
+}

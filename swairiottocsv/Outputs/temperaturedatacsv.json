@@ -1,0 +1,27 @@
+{
+    "Name": "temperaturedatacsv",
+    "DataSourceType": "Blob Storage",
+    "BlobStorageProperties": {
+        "StorageAccounts": [
+            {
+                "AccountName": "swairmon",
+                "AccountKey": null
+            }
+        ],
+        "Container": "processeddata",
+        "PathPattern": "temperature_{datetime:HH}.csv",
+        "DateFormat": "yyyy/MM/dd",
+        "TimeFormat": "HH",
+        "AuthenticationMode": "Msi",
+        "BlobWriteMode": "Append"
+    },
+    "DataSourceCredentialDomain": null,
+    "Serialization": {
+        "Type": "Csv",
+        "Encoding": "UTF8",
+        "FieldDelimiter": ","
+    },
+    "MinimumRows": null,
+    "MaximumTime": "01:00:00",
+    "ScriptType": "Output"
+}

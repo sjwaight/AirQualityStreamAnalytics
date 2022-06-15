@@ -1,0 +1,30 @@
+{
+    "name": "swairiottocsv",
+    "startFile": "Transformation.asaql",
+    "configurations": [
+        {
+            "filePath": "JobConfig.json",
+            "subType": "JobConfig"
+        },
+        {
+            "filePath": "Outputs/humiditydatacsv.json",
+            "subType": "Output"
+        },
+        {
+            "filePath": "Outputs/pm10datacsv.json",
+            "subType": "Output"
+        },
+        {
+            "filePath": "Outputs/pm25datacsv.json",
+            "subType": "Output"
+        },
+        {
+            "filePath": "Outputs/temperaturedatacsv.json",
+            "subType": "Output"
+        },
+        {
+            "filePath": "Inputs/rawiotjsondata.json",
+            "subType": "Input"
+        }
+    ]
+}

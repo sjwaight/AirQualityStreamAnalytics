@@ -1,0 +1,40 @@
+SELECT
+    DATETIMEFROMPARTS (DATEPART(year,readtime), DATEPART(month,readtime), DATEPART(day,readtime), DATEPART(hour, readtime), DATEPART(minute, readtime), 30, 0) as 'timestamp', 
+    temperature as value
+INTO
+    [temperaturedatacsv]
+FROM
+    [rawiotjsondata]
+
+SELECT 
+    DATETIMEFROMPARTS (DATEPART(year,readtime), DATEPART(month,readtime), DATEPART(day,readtime), DATEPART(hour, readtime), DATEPART(minute, readtime), 30, 0) as 'timestamp',
+    humidity as value
+INTO
+    [humiditydatacsv]
+FROM 
+    [rawiotjsondata]
+
+/* Parse values from both sensors and select the higher one. Does not allow for failure of one sensor, but works for our use case. */
+SELECT 
+    DATETIMEFROMPARTS (DATEPART(year,readtime), DATEPART(month,readtime), DATEPART(day,readtime), DATEPART(hour, readtime), DATEPART(minute, readtime), 30, 0) as 'timestamp',
+    CASE
+      WHEN pm100atma < pm100atmb THEN pm100atmb
+      ELSE pm100atma
+    END as value
+    
+INTO
+    [pm10datacsv]
+FROM 
+    [rawiotjsondata]
+
+/* Parse values from both sensors and select the higher one. Does not allow for failure of one sensor, but works for our use case. */
+SELECT
+    DATETIMEFROMPARTS (DATEPART(year,readtime), DATEPART(month,readtime), DATEPART(day,readtime), DATEPART(hour, readtime), DATEPART(minute, readtime), 30, 0) as 'timestamp',
+    CASE
+      WHEN pm25atma < pm25atmb THEN pm25atmb
+      ELSE pm25atma
+    END as value
+INTO
+    [pm25datacsv]
+FROM 
+    [rawiotjsondata]
