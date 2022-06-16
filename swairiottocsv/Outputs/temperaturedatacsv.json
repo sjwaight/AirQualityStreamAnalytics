@@ -9,7 +9,7 @@
             }
         ],
         "Container": "processeddata",
-        "PathPattern": "temperature_{datetime:HH}.csv",
+        "PathPattern": "temperature",
         "DateFormat": "yyyy/MM/dd",
         "TimeFormat": "HH",
         "AuthenticationMode": "Msi",

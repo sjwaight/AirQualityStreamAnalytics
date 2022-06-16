@@ -9,7 +9,7 @@
             }
         ],
         "Container": "processeddata",
-        "PathPattern": "pm25_{datetime:HH}.csv",
+        "PathPattern": "pm25",
         "DateFormat": "yyyy/MM/dd",
         "TimeFormat": "HH",
         "AuthenticationMode": "Msi",

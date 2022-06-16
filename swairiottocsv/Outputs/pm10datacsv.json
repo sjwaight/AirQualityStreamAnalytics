@@ -9,7 +9,7 @@
             }
         ],
         "Container": "processeddata",
-        "PathPattern": "pm10_{datetime:HH}.csv",
+        "PathPattern": "pm10",
         "DateFormat": "yyyy/MM/dd",
         "TimeFormat": "HH",
         "AuthenticationMode": "Msi",
